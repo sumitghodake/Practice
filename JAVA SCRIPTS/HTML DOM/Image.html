@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <script>
+        function changeImg()
+        {
+            var imgnode = document.getElementById("myimg");
+            s = imgnode.src;
+            w = imgnode.width;
+            h = imgnode.height;
+            imgnode.src="thar.jpeg";
+            imgnode.width="400";
+            imgnode.height="400"
+        }
+
+        function originalImg()
+        {
+            var imgnode = document.getElementById("myimg");
+            imgnode.src=s;
+            imgnode.width="500";
+            imgnode.height="500";
+        }
+    </script>
+</head>
+<body>
+    <img src="car.jpg" width="500" height="500" id="myimg" 
+     onmouseover="changeImg()"
+     onmouseout="originalImg()" />
+</body>
+</html>

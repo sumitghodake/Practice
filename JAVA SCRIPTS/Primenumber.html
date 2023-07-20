@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+       function primenum(num)
+       {
+        
+         for (i =2 ;i<num ;i++ )
+	      {
+              str=" ";
+              flag=true;
+			  if (num%i==0)
+			   {
+                flag=false;	
+				break;
+			   }
+              
+          }
+          if(flag==false)
+          {
+            str="it is not prime number";
+          }
+          else
+          {
+            str="it is prime number";
+          }
+          document.getElementById("print").innerHTML=str;
+        }
+       
+    </script>
+</head>
+
+<body>
+  <h2> Check Prime Number </h2>
+  <form>
+        Enter number : <input type="number" placeholder="Enter the number" name="num" id="num"/>
+        <br/>
+        <input type="button" value="check" 
+        onclick="primenum(num.value)"/>
+    </form>
+    <div id="print"></div>
+</body>
+
+
+</html>

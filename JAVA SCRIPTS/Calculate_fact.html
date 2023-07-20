@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Factorial</title>
+    <script>
+        function cal_fact(num)
+        {
+
+            if(num<0)
+            {
+                alert("it is negative number cann't calculate factorial ")
+            }
+            else
+            {
+                var fact = 1;
+                while(num>0)
+               {
+                
+                fact=fact*num;
+                num--;
+
+               }
+                
+            }
+            
+            document.getElementById("result").innerHTML="Factorial : "+fact
+            alert(fact)
+        }
+    </script>
+</head>
+<body>
+    <h2> Calculate Factorial</h2>
+    <form>
+        Enter number : <input type="number" name="num"placeholder="Enter number" id="num" />
+        <br/>
+        <input type="button" value="Calculate Fact" 
+        onclick="cal_fact(num.value)"/>
+    </form>
+    <div id="result"></div>
+</body>
+</html>

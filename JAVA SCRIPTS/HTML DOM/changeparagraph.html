@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <script>
+              function DispTable()
+               {
+                   var child=document.getElementById("k1").childNodes;
+
+                   var str = "<table border=1>"
+
+                    for (i=0;i<child.length;i++)
+                    {
+                        if(child[i].nodeType=null)
+                        {
+                            if(child[i].firstChild!=null)
+                            {
+                                str+="<tr>";
+                                str+="<td>" +child[i].nodeName+"</td>"
+                                str+="<td>"+child[i].firstChild+"</td>"
+                                str+="<tr>"  ; 
+                            }
+                        }
+
+                    }
+                    document.getElementById("t1").innerHTML=str;
+                    str="</table>"
+               }
+              function changePara()
+              {
+                var parr=document.getElementsByTagName("p");
+
+                for(i=0;i<parr.length;i++)
+                {
+                    parr[i].style.color="orange";
+                    parr[i].style.backgroundColor="black";
+
+                }
+              }
+
+              function changeHead()
+              {
+                var harr=document.getElementsByTagName("h2")
+
+                for(i=0;i<harr.length;i++)
+                {
+                    harr[i].style.color="blue";
+                    //harr[i].style.backgroundColor="green";
+                }
+              }
+        </script>
+    </head>
+    <body>
+        <div id="k1">
+        <h2> What is Java Script</h2>
+        <p>JavaScript (JS) is the most popular lightweight, interpreted compiled programming language. It can be used for both Client-side as well as Server-side developments. JavaScript also known as a scripting language for web pages.</p>
+
+        <h2> what is Java Script function</h2>
+        <p> A JavaScript function is a block of code designed to perform a particular task.
+            A JavaScript function is executed when "something" invokes it (calls it).
+            A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses (). Function names can contain letters, digits, underscores, and dollar signs (same rules as variables). </p>
+
+        <h2>What is HTML DOM</h2>
+        <p>The HTML DOM is a standard object model and programming interface for HTML. It defines:
+            The HTML elements as objects
+            The properties of all HTML elements
+            The methods to access all HTML elements
+            The events for all HTML elements
+            In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements. </p>
+        
+        <input type="button" onclick="changePara()" id="d1" value="change paragraph">
+        <input type="button" onclick="changeHead()" id="d2" value="change Heading">
+        <input type="button" onclick="DispTable()" id="d3" value="Create Table">
+        <div id="t1"></div>
+
+    </div>
+     
+    </body>
+</html>

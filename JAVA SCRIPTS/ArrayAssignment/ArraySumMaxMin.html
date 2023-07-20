@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <script>
+             function accept_value1(arr,size)
+               {
+                 for(i=0;i<size;i++)
+                 {
+                    arr[i] =parseInt(prompt('Enter the Element :'+(i+1)));
+                 }
+               }
+             function print_arr1(arr)
+               {
+                document.write("<ol>");
+                for(i=0;i<size;i++)
+                {
+                   // document.write("<br/>"+arr[i]);
+                     {
+                        document.write("<li>"+arr[i]+"</li>")
+                     }
+                }
+                document.write("</ol>");
+
+                function Eevn_odd(arr)
+                {
+                   if(arr[i]%2==0)
+                   {
+                    document.write("<br/>Even Element is :"+arr[i]);
+                   }
+                   else
+                   {
+                    document.write("<br/>odd Element is :"+arr[i]);
+                   }
+                }
+               }
+               
+        </script>
+    </head>
+    <body>
+        <h2>Arrya display</h2>
+        <script>
+              var arr=[];
+              size=prompt("enter the size")
+              accept_value1(arr,size);
+              print_arr1(arr);
+              Eevn_odd(arr);
+              
+              // Sum of array element;
+              var sum=0;
+              var sum=arr.reduce(function(a, sum){return a+sum});
+               document.write("addition of array element :"+sum+"<br/>")
+
+              // Find max array element 
+              var max=arr.reduce((a,b)=>Math.max(a,b))
+              document.write("<br/> Maximum Array element : "+max+"<br/>");
+
+              // Find min  array element 
+              var min=arr.reduce((a,b)=>Math.min(a,b))
+              document.write("<br/> minimum Array element : "+min+"<br/>");
+
+              // Find Average array 
+              document.write("<br/> Average of array :"+parseFloat(sum/size));
+             
+              // by Using Recursion function avg calculate 
+                var avg=arr.reduce(function(v,add,i,arr){
+                    if(i == arr.length-1)
+                        return (v+add)/arr.length;
+                    else 
+                         return v+add;
+                  })
+
+              document.write("<br/>Average is : " +avg);
+
+              
+
+
+        </script>
+    </body>
+</html>

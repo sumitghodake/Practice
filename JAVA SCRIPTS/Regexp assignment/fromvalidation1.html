@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <script>
+        function validation()
+        {
+            var uid= document.getElementById("uid1").value;
+             alert(uid)
+            var pattern1 =/^[A-Za-z]{8,15}$/
+            
+            if(!pattern1.test(uid))
+            {
+                document.getElementById("uiderror").innerHTML = "Invalid user name "; 
+                document.d1.uid1.value="";
+                document.d1.uid1.focus();
+                return;
+            }
+            else
+            {
+                document.getElementById("uiderror").innerHTML="";
+            } 
+
+            var pwd = document.getElementById("pwd1").value
+             
+            var pattern2 =/(?=.*[A-Z])(?=.*\d)(?=.*[~!@#$%^&*])[\w.~!@#$%^&*()]{8,}/
+            
+            if(!pattern1.test(pwd))
+            {
+                document.getElementById("pwderror").innerHTML = "Invalid Password "; 
+                document.d1.pwd.value="";
+                document.d1.pwd.focus();
+                return;
+            }
+            else
+            {
+                document.getElementById("pwderror").innerHTML ="";
+            } 
+            document.d1.submit();
+            
+
+        }
+        function validateuid(uid)
+        {
+            alert(uid.length)
+        }
+    </script>
+  </head>
+  <body>
+    <form name="d1">
+           Enter uid:
+           <input type ="text" name="uid1" id="uid1" placeholder="Enter userid"/>
+           <span id="uiderror" style="color:red"></span>
+           <br/>
+           Enter password :
+           <input type="text" name="pwd" id="pwd1" placeholder="Enter password"/>
+           <span id="pwderror" style="color:red"></span>
+           <br/>
+
+           <input type="button" value="Login"  onclick="validation()"/>
+           <input type="reset" value="Clear"  />
+
+    </form>
+  </body>
+</html>

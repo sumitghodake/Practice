@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //accept the value from the user.....
+               
+               function accept_value(arr,size)
+               {
+                 for(i=0;i<size;i++)
+                 {
+                    arr[i] =prompt('Enter the Element :'+(i+1))
+                 }
+               }
+               function print_arr(arr)
+               {
+                document.write("<ol>");
+                for(i=0;i<size;i++)
+                {
+                   // document.write("<br/>"+arr[i]);
+                     {
+                        document.write("<li>"+arr[i]+"</li>")
+                     }
+                }
+                document.write("</ol>");
+               }
+            // 1.Sorting operation....Sort element the by ascii value 
+               function sort_element(arr)
+               {
+                arr.sort();
+                document.write("<br/>"+arr.toString());
+               }
+
+              
+
+
+        </script>
+    </head>
+    <body>
+        <h2><i> Array of Integer</i></h2>
+        <script>
+              var arr=[];
+              size=prompt("enter the size")
+              accept_value(arr,size);
+              print_arr(arr);
+
+              document.write(" Sort element usig named function<br/>")
+              sort_element(arr);
+              print_arr(arr);
+
+          //2.Sort the element using anonymous function
+             document.write(" Sort element usig anonymous function<br/>")
+             arr.sort(function(a,b){return a-b});
+             document.write("<br/>"+arr.toString());
+             
+
+          //3.Sort the Element using Arrow functiom
+
+          document.write("<br/> Sort the element  usig Arrow function <br/>")  
+          
+          arr.forEach(a=>document.write("<li>"+a+"</li>"));
+          
+          // add and remove opration...
+          //1.add and remove at beginning
+           arr.shift();
+           document.write("<br/>"+arr.toString())
+           arr.unshift(222);
+           document.write("<br/>"+arr.toString());
+           
+
+ 
+               
+        </script>
+    </body>
+</html>

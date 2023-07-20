@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        4. Display 3 buttons on the page having a label of colon Clicking of the button should charge the background color of the document. 
+    </title>
+    <script>
+      function changeColor(node){
+      document.body.style.backgroundColor=node.innerText
+}
+    </script>
+  </head>
+  <body>
+    <div class="but">
+      <button class="btn" id="1" onclick="changeColor(this)" >Red</button>
+      <button class="btn"id="2" onclick="changeColor(this)" >Purple</button>
+      <button class="btn" id="3" onclick="changeColor(this)" >Yellow</button>
+    </div>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function change_Red()
+            {
+              document.getElementById("para").style.backgroundColor="red"
+            }
+            function change_Yellow()
+            {
+              document.getElementById("para").style.backgroundColor="yellow"
+            }
+            function change_Blue()
+            {
+              document.getElementById("para").style.backgroundColor="blue"
+            }
+
+
+
+        </script>
+    </head>
+    <body>
+        <h2>Document file</h2>
+        <p id ="para">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident aliquam illo unde consequatur facilis laudantium nemo ut hic ullam amet omnis, rerum blanditiis quaerat nostrum facere quasi obcaecati ea labore Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus ducimus voluptas ullam enim. Ea laudantium ipsum ad nesciunt earum illum fugit hic, nobis deserunt deleniti eius consequuntur. Quo, impedit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus odit excepturi voluptatum magnam natus quibusdam quos, quasi unde porro hic ullam voluptate consequuntur amet nam ratione at deleniti, rem facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sit eius officiis ullam facere. Quae omnis libero tenetur tempore quaerat? Possimus eveniet ipsa molestiae animi mollitia voluptas obcaecati atque consequuntur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad dolore quod labore mollitia porro rerum consequatur dolorem vitae doloremque nisi, veniam, reiciendis aliquam nostrum expedita inventore debitis iusto ipsam error?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minima eveniet voluptatibus sint vero dolorem unde ipsam neque mollitia culpa quod ad consequuntur, numquam eum deserunt at quos dolore vel.
+
+        </p>
+        <input type="button" onclick="change_Red()" id="r1" value="change to red ">
+        <input type="button" onclick="change_Yellow()" id="y1" value="change to yellow ">
+        <input type="button" onclick="change_Blue()" id="b1" value="change to blue">
+    </body>
+</html> -->

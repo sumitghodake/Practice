@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <title>Slide Show</title>
+    <script>
+        var i=0;
+        var arr =["1.jpeg","2.jpeg","3.jpeg","4.jpeg","5.jpeg","6.jpeg"];
+
+        function image()
+        {
+            i++;
+            if(i==arr.length)
+             i=0;
+             document.getElementById("tab").src=arr[i];
+             setTimeout(image,1000);
+        }
+    </script>
+    <div style="text-align: center;">  
+    <body onload="image()">
+        <img src="1.jpeg" width="500" height="500" id="tab"/>
+
+    </body>
+</div>
+</html>

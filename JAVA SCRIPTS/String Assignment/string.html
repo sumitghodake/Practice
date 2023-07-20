@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <script>
+              var str="";
+              function string_accept(str1)
+              {
+                 str=str1;
+                 alert(str1);    //document.getElementById("str1").value;
+
+              }
+              function string_length()
+              {
+                document.getElementById("length").innerHTML="Length of String :"+str.length;
+              }
+              function upperCase()
+              {
+                document.getElementById("upper").innerHTML="Upper case :"+str.toUpperCase();
+              }
+              function lowercase()
+              {
+                document.getElementById("lower").innerHTML="lower case :"+str.toLowerCase();
+              }
+              function searchIndex(key)
+              {
+                document.getElementById("key").innerHTML=key+ " are Found At Index :"+str.search(key);
+              }
+              function find_char_at_index(index)
+              {
+                document.getElementById("charAt").innerHTML="At index "+index+" "+str.charAt(index)+" is Found and Ascii value of element";
+              }
+              function concate(str2,str4)
+              {
+                document.getElementById("Concate").innerHTML="Concate String :"+str2+str4;
+              }
+              
+                
+              
+        </script>
+    </head>
+    <body>
+        <table>
+          <tr>
+            <td>Enter String :</td>
+            <td ><input type="text" name="str1" id="str1"/></td>
+            <td><input type="button" value="Enter" onclick="string_accept(str1.value)"/></td>
+          </tr>
+           <br/>
+
+          <tr>
+            <td><input type="button" value="calculate str length" onclick="string_length()"/></td>
+            <td><div id="length"></div></td>
+          </tr>
+           <br/>
+          <tr>
+            <td><input type="button" value="Convert to upper case " onclick="upperCase()"/></td>
+            <td><div id="upper"></div></td>
+          </tr>
+          <br/>
+          <tr>
+            <td><input type="button" value="Convert to lower case " onclick="lowercase()"/></td>
+            <td><div id="lower"></div></td>
+          </tr>
+          <br/>
+          <tr>
+            <td> <input type="text" name="key_1" id="key_1" placeholder="Enter key"/></td>
+            <td><input type ="button" value="Search first Index" onclick="searchIndex(key_1.value)"/></td>
+            <td><div id="key"></div></td>
+          </tr>
+          <tr>
+            <td><input type ="text" name="index1" id="index1"/></td>
+            <td><input type="button" value="Search charcter " onclick="find_char_at_index(index1.value)"/></td>
+            <td><div id="charAt"></div></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="string1" id="string1" placeholder="Enter the 1st string"/></td>
+            <td><input type="text" name="string2" id="string2" placeholder="Enter the 2nd string"/></td>
+            <td><input type="button" value="String Concate"onclick="concate(string1.value,string2.value)"/> </td>
+            <td><div id="Concate"></div></td>
+
+
+        </table>
+       
+        </body>
+</html>

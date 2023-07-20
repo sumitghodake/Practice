@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+ <html>
+    <head> 
+      <script>
+        // function dispTable(num)
+        // {
+        //     //alert(num);
+        //     var str="";
+        //     str+="<table border='1'>";
+        //     for(i=1;i<=10;i++)
+        //     {
+        //         str+="<tr>";
+        //         str+="<td>";
+        //         str+=num+" * "+i+" = "+(num*i);    
+        //         str+="</td>";        
+        //         str+="</tr>";    
+        //     }
+        //     str+="</table>";
+        //     //alert(str);    
+        //     console.log(str);
+        //     document.getElementById("table").innerHTML=str;
+        // }
+        function cal_Power(base,pow)
+        {
+            var result=1;
+            while(pow!=0)
+            {
+                result=resul*base;
+                pow--;
+            }
+            document.getElementById("result").innerHTML="result :"+result
+        }
+      </script>
+    </head>
+    body>
+    <h2> Calculate Power</h2>
+    <form>
+        Enter base number : <input type="number" name="base" id="base"  />
+        <br/>
+        Enter power number : <input type="number" name="pow" id="pow" />
+        <input type="button" value=" calculate power" 
+         onclick="cal_Power(base.value,pow.value)" />
+    </form>
+    <div id="result"></div>
+</body>
+
+ </html>

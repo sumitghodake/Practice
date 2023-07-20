@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+               function changeWord()
+               {
+                  var sh=document.getElementById("h").style.textShadow="5px 2px 2px red"
+               }
+               function originalWord()
+               {
+                 document.getElementById("h").style.textShadow="none";
+               }
+        </script>
+    </head>
+    <body>
+        <h2 id="h" onmouseover="changeWord()"
+             onmouseout="originalWord()" >My name is Sumit Ghodake</h2>
+    </body>
+</html>

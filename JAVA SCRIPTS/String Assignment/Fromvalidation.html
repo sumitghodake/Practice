@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           function validation()
+           {
+               
+           }
+        </script>
+    </head>
+    <body>
+        <form name>
+            Enter uid : 
+            <input type="text" name="uid" id="uid_id" placeholder="Enter user id" onblur="validateuid(uid.value)" />
+            <span id="uiderror" style="color:red"></span>
+            <br/>
+            Enter password : 
+            <input type="text" name="pwd" placeholder="Enter password" onfocus="f_pwd()"/>
+            <span id="pwderror" style="color:red"></span>
+            <br/>
+            Select gender : 
+            <input type="radio" name="gender" value="M" /> Male
+            <input type="radio" name="gender" value="F" /> Female
+            <span id="gendererror" style="color:red"></span>
+            <br/>
+            <input type="button" value="Login" 
+               onclick="validate()"/>
+    
+        </form>
+    </body>
+</html>

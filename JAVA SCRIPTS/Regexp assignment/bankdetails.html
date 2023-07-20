@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <script>
+    function validateForm() {
+      var firstName = document.forms["myForm"]["firstName"].value;
+      var lastName = document.forms["myForm"]["lastName"].value;
+      var accountNo = document.forms["myForm"]["accountNo"].value;
+      var password = document.forms["myForm"]["password"].value;
+      var retypePassword = document.forms["myForm"]["retypePassword"].value;
+
+      // Validate empty fields
+      if (firstName === "" || lastName === "" || accountNo === "" || password === "" || retypePassword === "") 
+      {
+        alert("Please fill in all the fields");
+        return false;
+      }
+
+      // Validate first name and last name contain only alphabets
+      var alphabetRegex = /^[a-zA-Z]+$/;
+      if (!firstName.match(alphabetRegex) || !lastName.match(alphabetRegex)) 
+      {
+        alert("First name and last name should contain only alphabets");
+        return false;
+      }
+
+      // Validate account number is numeric and has 10 digits
+      var numericRegex = /^\d+$/;
+      if (!accountNo.match(numericRegex) || accountNo.length !== 10) 
+      {
+        alert("Account number should be numeric and have 10 digits");
+        return false;
+      }
+
+      // Validate password length and composition
+      var passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{5,}$/;
+      if (!password.match(passwordRegex)) 
+      {
+        alert("Password should be minimum 5 characters and contain at least one numeric and one special character");
+        return false;
+      }
+
+      // Validate password and retype password match
+      if (password !== retypePassword)
+       {
+        alert("Password and retype password should be the same");
+        return false;
+      }
+
+      // Display password strength message
+
+      var passwordStrengthMessage = document.getElementById("passwordStrengthMessage");
+      
+      if (password.match(/^[a-zA-Z]+$/))
+      {
+        passwordStrengthMessage.innerHTML = "Weak Password";
+      } 
+      else if (password.match(/^(?=.*[a-zA-Z])(?=.*\d|.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]+$/)) 
+      {
+        passwordStrengthMessage.innerHTML = "Average Password";
+      } 
+      else 
+      {
+        passwordStrengthMessage.innerHTML = "Strong Password";
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form name="myForm" onsubmit="return validateForm()">
+    <label>First Name:</label>
+    <input type="text" name="firstName" required><br><br>
+
+    <label>Last Name:</label>
+    <input type="text" name="lastName" required><br><br>
+
+    <label>Account No:</label>
+    <input type="text" name="accountNo" required><br><br>
+
+    <label>Password:</label>
+    <input type="text" name="password" required><br><br>
+
+    <label>Retype Password:</label>
+    <input type="password" name="retypePassword" required><br><br>
+
+    <span id="passwordStrengthMessage"></span><br/>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
